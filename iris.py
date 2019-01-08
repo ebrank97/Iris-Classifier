@@ -73,4 +73,8 @@ classifier = svm.SVC(C=1.0,probability=True, random_state=1)
 classifier.fit(X, y)
 
 print('Training Accuracy: ', classifier.score(X, y))
+
+#print('Prediction results: ', classifier.predict([['SepalLength(Cm)',  'SepalWidth(Cm)',  'PetalLength(Cm)',  'PetalWidth(Cm)']]))
 print('Prediction results: ', classifier.predict([[5.2,  3.5,  2.4,  1.2]]))
+
+
