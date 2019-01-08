@@ -36,7 +36,9 @@ print('Prediction results LinearSVC: ', lin_svc.predict([[5.2,  3.5]]))
 print('Prediction results RBF: ', rbf_svc.predict([[5.2,  3.5]]))
 print('Prediction results SVC: ', poly_svc.predict([[5.2,  3.5]]))
 '''
+
 #Modeling Different Kernel Svm classifier using Iris Petal features
+'''
 X = iris.data[:, 2:]
 y = iris.target
 C = 1.0
@@ -59,14 +61,16 @@ print('Prediction results LinearKernel: ', svc.predict([[2.4,  1.2]]))
 print('Prediction results LinearSVC: ', lin_svc.predict([[2.4,  1.2]]))
 print('Prediction results RBF: ', rbf_svc.predict([[2.4,  1.2]]))
 print('Prediction results SVC: ', poly_svc.predict([[2.4,  1.2]]))
+'''
 
 #Modeling Svm classifier using Iris Sepal and Petal features
-'''
 X, y = iris.data, iris.target
 
+#Creating the classifier
 classifier = svm.SVC(C=1.0,probability=True, random_state=1)
+
+#Fitting the dataset to the model
 classifier.fit(X, y)
 
 print('Training Accuracy: ', classifier.score(X, y))
 print('Prediction results: ', classifier.predict([[5.2,  3.5,  2.4,  1.2]]))
-'''
