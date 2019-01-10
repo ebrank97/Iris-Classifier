@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from iris import train_model, predict_result
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/predict')
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
     return render_template('predict.html',)
 
